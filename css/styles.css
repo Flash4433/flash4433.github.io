@@ -1,0 +1,238 @@
+@font-face {
+    font-family: Inter;
+    src: url(../fonts/inter-variable.woff);
+}
+
+:root {
+    --background: #f0f0f0;
+    --card: #e6e6e6;
+    --border: #a7a7a7;
+    --middle: #636363;
+    --text: #212121;
+    --accent: #870d0d;
+    --selection: #d6d2d2;
+    --link: #636363;
+    --hover-shadow: 0 0 20px #a7a7a7;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: #1d1d1d;;
+        --card: #0e0e0e;
+        --border: #403f3f;
+        --middle: #767373;
+        --text: #c2bebe;
+        --accent: #d56a6a;
+        --selection: #424141;
+        --link: #d8d8d8;
+        --hover-shadow: 0 0 50px #e3d1bb20;
+    }
+}
+
+::selection {
+    background-color: var(--selection);
+}
+
+body {
+    background-color: var(--background);
+    font-family: Inter, sans-serif;
+    margin: auto;
+    max-width: 80ch;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    display: grid;
+    font-size: 18px;
+    color: var(--text);
+    cursor: url(../resources/cursor.png), auto;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+main {
+    padding-bottom: 20px;
+}
+
+header {
+    margin: 0;
+    padding-top: 1rem;
+}
+
+nav {
+    margin-top: 10px;
+    display: flex;
+    border-bottom: 1px solid var(--text);
+}
+
+nav a {
+    margin: 0;
+    padding: 5px;
+    text-decoration: none;
+    transition: all .25s;
+    color: var(--text);
+}
+
+.homelink {
+    flex-grow: 1;
+}
+
+.emptyspace {
+    flex-grow: 1;
+    padding-top: 5px;
+}
+
+nav a:hover {
+    color: var(--background);
+    background-color: var(--text);
+}
+
+.wrapper{
+    display:inline;
+}
+.wrapper a span{
+    position: absolute;
+    display: none;
+    z-index: 99;
+    transform: scale(0);
+    overflow: hidden;
+    border: none;
+    padding: 4px 4px 0px;
+    transition: 1s;
+}
+.wrapper a:hover span{
+    display: block;
+    transform: translate(25%,30%) scale(1.5);
+}
+
+main mark, main mark a {
+    background-color: transparent;
+    color: var(--accent)
+}
+
+main a {
+    color: var(--link);
+    transition: 0.3s;
+    cursor: url(../resources/cursor2.png), auto;
+}
+
+main a:hover {
+    color: var(--accent);
+    position: relative;
+}
+
+main a[href]:not(:where([href^="#"], [href^="/"]:not([href^="//"]),)):after {
+    content: '↗';
+    font-family: arial;
+}
+
+main img {
+    max-width: 100%;
+}
+
+main .youtube-embed {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%;
+}
+
+main iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+main .date-list {
+    padding: 0;
+    list-style-type: none;
+}
+
+main time {
+    color: var(--middle);
+}
+
+main .date-list li time {
+    padding-right: 20px
+}
+
+main pre {
+    background-color: var(--card);
+    overflow: auto;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+main kbd, main span {
+    font-size: 85%;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    border: 1px solid var(--middle);
+    font-family: inherit;
+    background-color: var(--card);
+}
+
+main table tr {
+    text-align: left;
+    vertical-align:  center;
+}
+
+main table, main td, main th {
+    border: 1px solid var(--middle);
+    border-collapse: collapse;
+    padding: 3px 4px;
+}
+
+main .gallery {
+    columns: 15rem 2;
+    gap: .5rem;
+}
+
+main .gallery img {
+    width: 100%;
+    margin-bottom: .3rem;
+    transition: all 0.25s ease-in-out;
+}
+
+main .gallery img:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+main .reel {
+    column-gap: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+}
+
+@media (max-width: 600px) {
+    main .reel {grid-template-columns: 1fr;}
+    main .reel img {padding-top: 1rem}
+}
+
+main .note {
+    padding: 20px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: all 0.25s ease-in-out;
+}
+
+main .note:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+main .note *:first-child { 
+    margin-top: 0;
+}
+
+main .note *:last-child { 
+    margin-bottom: 0;
+}
+
+footer {
+    position: relative;
+    margin-top: auto;
+    text-align: center;
+    padding-bottom: 1rem;
+}
