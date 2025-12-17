@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css?family=Chakra+Petch');
+
+body{
+    cursor: url('https://img.itch.zone/aW1hZ2UvMTk2MTk0Mi8xOTE1MTk0NS5wbmc=/original/U9VUYo.png'), auto;
+}
+#wrapper body{
+    /*text-shadow: 1px 1px #680920;*/
+    font-family: 'Chakra Petch', monospace;
+}
+.link_group a{
+    font-size: 18px;
+}
+.game_title a{
+    font-size: 22px;
+}
+.profile_column, .title{
+    font-family: 'Chakra Petch', monospace;
+}
+.gif_label {
+    top: 0 !important;
+    left: 0 !important;
+    border-radius: 0 0 4px 0 !important;
+}
+.game_thumb {
+    background-color: white !important;
+}
+body a, body button, #wrapper a, #wrapper button, .lightbox.screenshot_lightbox .screenshot_container .prev_image_btn, .lightbox.screenshot_lightbox .screenshot_container .next_image_btn {
+    cursor: url('https://img.itch.zone/aW1hZ2UvMTk2MTk0Mi8xOTE1MTk0Ni5wbmc=/original/GBz7fR.png'), auto;
+}
+
+.game_cell_data{
+    padding: 4px;
+    min-height: 135px;
+}
+.game_grid_widget{
+    padding-bottom: 14px;
+}
+.footer {
+    border-top: 8px solid #680920;
+}
+
+
+/* Custom Cover Art for Games*/
+.user_game_grid .game_cell:nth-child(1) .game_thumb .lazy_loaded{
+  content: url('https://img.itch.zone/aW1hZ2UvMTk2MTk0Mi8yMDM5OTg4MS5wbmc=/original/%2BtH075.png');
+}
+.user_game_grid .game_cell:nth-child(2) .game_thumb .lazy_loaded{
+  /*content: url('https://img.itch.zone/aW1hZ2UvMTk2MTk0Mi8xOTE1MTk0NS5wbmc=/original/U9VUYo.png');*/
+}
+.user_game_grid .game_cell:nth-child(3) .game_thumb .lazy_loaded{
+  /*content: url('https://img.itch.zone/aW1hZ2UvMTk2MTk0Mi8xOTE1MTk0NS5wbmc=/original/U9VUYo.png');*/
+}
+
+
+.user_page .profile_content .game_cell { 
+    transition: all .2s;
+    padding: 0px;
+}
+.user_game_grid {
+    grid-gap: 20px;
+}
+.user_page .profile_content .game_cell:hover {
+    transform: scale(1.05);
+    background-image: linear-gradient(#2E2140, #680920);
+    border-radius: 4px;
+    padding: 10px 10px 0px 10px;
+ }
+
+.user_page .profile_content .game_cell .title{
+    transition: all .2s;
+ }
+.user_page .profile_content .game_cell:hover .title{
+    font-size: 24px;
+ }
+.user_page .profile_content .game_cell .game_text{
+    transition: all .2s;
+ }
+.user_page .profile_content .game_cell:hover .game_text{
+    font-size: .815em;
+ }
+
+.lazy_loaded {
+    mask-image: linear-gradient(45deg,#fff 25%,rgba(255,255,255,.4) 50%,#fff 75%);
+    mask-size: 800%;
+    mask-position: 0;
+}
+.user_page .profile_content .game_cell:hover > .game_thumb > .thumb_link > .lazy_loaded {
+    transition: mask-position 2s ease;
+    mask-position: 120%;
+    opacity: 1;
+}
+.profile_content .game_grid_widget{
+  margin-top: 25px;
+}
+
+.collection_row .game_cell{
+  padding: 10px;
+  border-image: linear-gradient(#2E2140, #680920) 1;
+  border-width: 4px;
+  border-style: solid;
+  padding: 5px;
+}
+.collection_row .game_cell .game_text{
+  white-space: normal;
+}
+
+.custom-tiny {
+  display: ;
+  position: relative;
+  bottom: 352px;
+  image-rendering: pixelated;
+  vertical-align: top;
+  float: right;
+  height: 64px;
+  animation: 2s cubic-bezier(.175, .885, .32, 1.275) infinite alternate jump;
+}
+@keyframes jump {
+  15%, 5% {
+    transform: translateY(0);
+  }
+  10% {
+    transform: translateY(-1em);
+  }
+}
