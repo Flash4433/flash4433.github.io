@@ -34,7 +34,13 @@
 }
 
 body {
+    /* Background animation */
+    background-image: radial-gradient(var(--selection) 2px, transparent 2px);
+    background-size: 16px 16px;
     background-color: var(--background);
+    background-position: 0 0;
+    animation: bg-pan-diagonal 15s linear infinite;
+    
     font-family: Inter, sans-serif;
     margin: auto;
     max-width: 80ch;
@@ -47,6 +53,12 @@ body {
     padding-left: 10px;
     padding-right: 10px;
 }
+
+/* Background animation */
+@keyframes bg-pan-diagonal {
+        from { background-position: 0 0; }
+        to   { background-position: 48px -64px; }
+    }
 
 main {
     padding-bottom: 20px;
@@ -222,6 +234,8 @@ main .reel {
     main .reel img {padding-top: 1rem}
 }
 
+
+/* Notes */
 main .note {
     padding: 20px;
     background-color: var(--card);
@@ -243,6 +257,15 @@ main .note *:last-child {
     margin-bottom: 0;
 }
 
+/* Game Panel */
+main .game1:hover .note.gameHidden1 {
+    display: block;
+}
+main .note.gameHidden1 {
+    display: none;
+}
+
+/* Footer */
 footer {
     position: relative;
     margin-top: auto;
