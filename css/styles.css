@@ -43,7 +43,7 @@ body {
     
     font-family: Inter, sans-serif;
     margin: auto;
-    max-width: 80ch;
+    max-width: 120ch;
     grid-template-rows: auto 1fr auto;
     min-height: 100vh;
     display: grid;
@@ -202,7 +202,7 @@ main table tr {
 }
 
 main table, main td, main th {
-    border: 1px solid var(--middle);
+    /*border: 1px solid var(--middle);*/
     border-collapse: collapse;
     padding: 3px 4px;
 }
@@ -257,12 +257,32 @@ main .note *:last-child {
     margin-bottom: 0;
 }
 
+
+
+
 /* Game Panel */
-main .game1:hover .note.gameHidden1 {
-    display: block;
+main .game-panel {
+    display:table;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 3px;
+    margin-top: 10px;
+    transition: all 0.25s ease-in-out;
 }
-main .note.gameHidden1 {
-    display: none;
+
+main .game-panel:hover {
+    box-shadow: var(--hover-shadow);
+}
+
+main .game-panel *:first-child { 
+    margin-top: 0;
+}
+
+main .game-panel *:last-child { 
+    margin-bottom: 0;
 }
 
 /* Footer */
