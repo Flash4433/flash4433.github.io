@@ -84,7 +84,7 @@ nav a {
 }
 
 .homelink {
-    flex-grow: 1;
+    padding-right: 120px;
 }
 
 .emptyspace {
@@ -198,13 +198,13 @@ main .sub2{
 
 main table tr {
     text-align: left;
-    vertical-align:  center;
+    vertical-align: top;
 }
 
 main table, main td, main th {
     /*border: 1px solid var(--middle);*/
     border-collapse: collapse;
-    padding: 3px 4px;
+    /*padding: 3px 4px;*/
 }
 
 main .gallery {
@@ -257,19 +257,15 @@ main .note *:last-child {
     margin-bottom: 0;
 }
 
-
-
-
 /* Game Panel */
 main .game-panel {
-    display:table;
-    height: 100%;
+    display: table;
+    height: stretch;
     width: 100%;
     padding: 20px;
     background-color: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    margin-top: 10px;
+    border: 2px solid var(--border);
+    margin-top: 1.33em;
     transition: all 0.25s ease-in-out;
 }
 
